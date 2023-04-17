@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { IoIosAddCircleOutline } from "react-icons/io";
+import { FormContext } from "../../Context/FormContext";
 
 export default function NavBar() {
-  const [viewForm, setViewForm] = useState(false);
+    const {viewForm, setViewForm} = useContext(FormContext)
 
   const handleViewForm = () => {
-    setViewForm(true)
+    if(!viewForm){
+        setViewForm(true)
+    }else{
+        setViewForm(false)
+    }
 }
 
   return (
@@ -17,7 +22,7 @@ export default function NavBar() {
           </div>
           <div className="flex items-center">
             <button onClick={handleViewForm}>
-              <IoIosAddCircleOutline className="text-6xl" />
+              <IoIosAddCircleOutline className="text-5xl" />
             </button>
           </div>
         </div>
