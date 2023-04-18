@@ -117,7 +117,7 @@ export default function FormTask() {
               Cancelar
             </Button>
 
-            <Button variant="primary" type="submit">
+            <Button variant={!isCreated ? 'success' : 'primary'} type="submit">
               {!isCreated ? 'Guardar cambios' : 'Añadir tarea' }
             </Button>
           </div>
