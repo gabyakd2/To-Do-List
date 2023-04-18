@@ -3,11 +3,12 @@ import { IoIosAddCircleOutline } from "react-icons/io";
 import { FormContext } from "../../Context/FormContext";
 
 export default function NavBar() {
-    const {viewForm, setViewForm} = useContext(FormContext)
+    const {viewForm, setViewForm, isCreated, setIsCreated} = useContext(FormContext)
 
   const handleViewForm = () => {
     if(!viewForm){
         setViewForm(true)
+        setIsCreated(true)
     }else{
         setViewForm(false)
     }
