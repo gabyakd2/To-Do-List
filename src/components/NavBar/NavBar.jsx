@@ -22,7 +22,7 @@ export default function NavBar() {
           </div>
           <div className="flex items-center">
             <button onClick={handleViewForm}>
-              <IoIosAddCircleOutline className="text-5xl" />
+              <IoIosAddCircleOutline className="text-5xl" color="#fff" />
             </button>
           </div>
         </div>

@@ -8,7 +8,7 @@ export default function Filters() {
       <div className="flex justify-around">
         <div>
           <label>Prioridad</label>
-          <select className="block w-80 p-2 rounded border border-gray-300 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+          <select className="text-white block w-80 p-2 rounded border border-gray-300 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
             <option value="">Alta</option>
             <option value="opcion1">Media</option>
             <option value="opcion2">Baja</option>
@@ -16,7 +16,7 @@ export default function Filters() {
         </div>
         <div>
             <label>Estado</label>
-          <select className="block w-80 p-2 rounded border border-gray-300 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+          <select className="text-white block w-80 p-2 rounded border border-gray-300 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
             <option value="">Estado</option>
             <option value="opcion1">Nueva</option>
             <option value="opcion2">En proceso</option>

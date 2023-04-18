@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import Filters from "../../components/Filters/Filters";
-import CardTask from "../../components/CardTask/CardTask";
 import { FormContext } from "../../Context/FormContext";
 import FormTask from "../../components/FormTask/FormTask";
+import ToDoList from "../../components/ToDoList/ToDoList";
 
 export default function Home() {
   const { viewForm } = useContext(FormContext);
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="">
       <Filters />
-      <CardTask />
+      <ToDoList />
       {
         viewForm ? <FormTask /> 
         : null
