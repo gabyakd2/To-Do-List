@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
-import useFilters from "../../hooks/useFilters";
 
-export default function Filters() {
-  const { filters, setFilters } = useFilters();
+export default function Filters({setFilters}) {
 
   const handleChangeStatus = (e) => {
     setFilters((prevState) => ({
