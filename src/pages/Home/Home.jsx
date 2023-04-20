@@ -8,7 +8,7 @@ export default function Home() {
   const { viewForm } = useContext(FormContext);
 
   return (
-    <div className="">
+    <div className="min-h-screen pt-3 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-red-400 via-gray-300 to-blue-500">
       <Filters />
       <ToDoList />
       {

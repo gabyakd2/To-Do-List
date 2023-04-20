@@ -22,7 +22,7 @@ export default function CardTask({ title, description, priority, status, id }) {
   }
 
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+    <div className="max-w-sm w-96 h-64 rounded overflow-hidden shadow-lg">
       <div className="px-6 py-4">
         <div className="font-semibold text-xl mb-2 flex justify-between">
           <h3>
