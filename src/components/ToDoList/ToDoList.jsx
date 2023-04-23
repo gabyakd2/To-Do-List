@@ -1,11 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { FormContext } from "../../Context/FormContext";
 import CardTask from "../CardTask/CardTask";
-// import useFilters from "../../hooks/useFilters";
 import imgempty from "../../assets/images/notfound.png"
 
-export default function ToDoList({filters, setFilters}) {
-  const { toDo, setToDo } = useContext(FormContext);
+export default function ToDoList({filters}) {
+  const { toDo } = useContext(FormContext);
 
 const filterTasks = toDo.filter(task => (
   filters.status === 'all' || task.status === filters.status
@@ -16,7 +15,7 @@ const filterTasks = toDo.filter(task => (
   return (
     <div className="flex flex-wrap justify-center">
       {!filterTasks.length ? (
-        <div className="mx-auto w-52">
+        <div className="mx-auto w-52 mt-24">
           <img src={imgempty} alt="Imagen central" className="mx-auto w-48" />
           <h3>Agregue alguna tarea.</h3>
         </div>

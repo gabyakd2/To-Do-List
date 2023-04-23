@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import SearchBar from "../SearchBar/SearchBar";
 
 export default function Filters({setFilters}) {
 
@@ -16,10 +15,10 @@ export default function Filters({setFilters}) {
       priority: e.target.value
     }))
   }
-// console.log(filters)
+  
   return (
     <div>
-      <h1 className="text-3xl text-center">Filtrar por: </h1>
+      <h1 className="text-3xl text-center font-bold mb-4">Filtrar por: </h1>
       <div className="flex justify-around">
         <div>
           <label>Prioridad</label>
@@ -44,7 +43,6 @@ export default function Filters({setFilters}) {
           </select>
         </div>
       </div>
-      <SearchBar />
     </div>
   );
 }

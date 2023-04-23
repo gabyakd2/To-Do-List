@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react";
+import {useLocalStorage} from '../hooks/useLocalStorage';
 
 export const FormContext = createContext();
 
@@ -6,7 +7,7 @@ export function FormProvider({ children }) {
   const [viewForm, setViewForm] = useState(false);
   const [isCreated, setIsCreated] = useState(false);
   const [toDoFind , setToDoFind] = useState();
-  const [toDo, setToDo] = useState([]); //aca se guardan las tareas
+  const [toDo, setToDo] = useLocalStorage('list', []); //aca se guardan las tareas
   const [formData, setFormData] = useState({
     title: "",
     description: "",

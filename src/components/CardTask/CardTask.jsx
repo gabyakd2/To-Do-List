@@ -25,9 +25,9 @@ export default function CardTask({ title, description, priority, status, id }) {
     <div className="max-w-sm w-96 h-64 rounded overflow-hidden shadow-lg">
       <div className="px-6 py-4">
         <div className="font-semibold text-xl mb-2 flex justify-between">
-          <h3>
+          <h5>
             Titulo: <span className="font-extrabold">{title}</span>
-          </h3>
+          </h5>
           <div>
             <button onClick={() => updateToDo(id)}>
               <FaEdit />
@@ -39,7 +39,7 @@ export default function CardTask({ title, description, priority, status, id }) {
         </div>
         <div className="border-b border-gray-400"></div>
 
-        <div className="mt-5">
+        <div className="mt-3">
           <div className="font-normal">Descripción:</div>
           <p className="font-bold">{description}</p>
           <div className="flex justify-around mt-4">

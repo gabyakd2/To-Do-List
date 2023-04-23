@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
 import { FormContext } from "../../Context/FormContext";
+import swal from 'sweetalert';
 
 export default function FormTask() {
   const {
@@ -35,11 +36,14 @@ export default function FormTask() {
   const addToDo = (e) => {
     e.preventDefault();
     if (isCreated) {
-      if (formData.title !== "" && formData.description !== "") {
+      if (formData.title !== "" && formData.description !== "" && formData.priority !== '' && formData.status !== '') {
         const task = formData;
         task.id = Date.now();
         setToDo([...toDo, task]);
         setFormData({ title: "", description: "", priority: "", status: "" });
+        swal("Tarea agregada!", "Tu tarea se añadio correctamente!", "success");
+      } else {
+        swal("Error al agregar!", "Campos faltantes!", "error");
       }
     } else {
       updateToDo(toDoFind.id, formData);
@@ -65,6 +69,7 @@ export default function FormTask() {
               type="text"
               placeholder="Nombre de su nueva tarea..."
               name="title"
+              maxLength="15"
               defaultValue={!isCreated ? toDoFind?.title : formData?.title}
               onChange={handleInput}
             />
@@ -75,6 +80,7 @@ export default function FormTask() {
             <Form.Control
               type="text"
               placeholder="Descripción"
+              maxLength="35"
               name="description"
               defaultValue={
                 !isCreated ? toDoFind?.description : formData?.description
@@ -92,7 +98,7 @@ export default function FormTask() {
               onChange={handleInput}
               name="priority"
             >
-              <option>Elija la prioridad</option>
+              <option value=''>Elija la prioridad</option>
               <option value="Alta">Alta</option>
               <option value="Media">Media</option>
               <option value="Baja">Baja</option>
@@ -106,7 +112,7 @@ export default function FormTask() {
               onChange={handleInput}
               name="status"
             >
-              <option>Elija el estado</option>
+              <option value=''>Elija el estado</option>
               <option value="Finalizada">Finalizada</option>
               <option value="En proceso">En proceso</option>
               <option value="Nueva">Nueva</option>
