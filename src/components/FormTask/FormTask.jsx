@@ -69,7 +69,6 @@ export default function FormTask() {
               type="text"
               placeholder="Nombre de su nueva tarea..."
               name="title"
-              maxLength="15"
               defaultValue={!isCreated ? toDoFind?.title : formData?.title}
               onChange={handleInput}
             />
@@ -80,7 +79,6 @@ export default function FormTask() {
             <Form.Control
               type="text"
               placeholder="Descripción"
-              maxLength="35"
               name="description"
               defaultValue={
                 !isCreated ? toDoFind?.description : formData?.description
