@@ -45,7 +45,7 @@ export default function Filters({setFilters}) {
     //   </div>
     // </div>
     <div class="flex flex-col items-center">
-  <h1 class="text-3xl text-center font-bold mb-4">Prueba cambio</h1>
+  <h1 class="text-3xl text-center font-bold mb-4">Filtrar por: </h1>
   <div class="flex flex-col sm:flex-row justify-center">
     <div class="mb-4 sm:mb-0 sm:mr-4">
       <label class="block mb-2">Prioridad</label>
